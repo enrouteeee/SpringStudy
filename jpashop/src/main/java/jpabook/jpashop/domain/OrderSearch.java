@@ -1,17 +1,10 @@
-package jpabook.jpashop.repository;
+package jpabook.jpashop.domain;
 
-import jpabook.jpashop.domain.Order;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.EntityManager;
-import java.util.List;
-
 @Getter @Setter
-@RequiredArgsConstructor
 public class OrderSearch {
-    private final EntityManager em;
-
-
+    private String memberName; //회원 이름
+    private OrderStatus orderStatus;//주문 상태[ORDER, CANCEL] //Getter, Setter
 }
